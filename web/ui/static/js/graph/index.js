@@ -263,7 +263,8 @@ Prometheus.Graph.prototype.initTypeahead = function(self) {
   self.expr.typeahead({
     autoSelect: false,
     source,
-    items: "all",
+    minLength: 3,
+    items: 75,
     matcher: function (item) {
       // If we have result for current query, skip
       if (self.fuzzyResult.query !== this.query) {
